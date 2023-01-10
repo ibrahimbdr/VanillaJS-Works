@@ -1,0 +1,21 @@
+
+
+
+
+
+#slideContainer{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin-top: 100px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 580px;
+    background-color:azure;
+    border-radius: 10px;
+    font-size: larger;
+}

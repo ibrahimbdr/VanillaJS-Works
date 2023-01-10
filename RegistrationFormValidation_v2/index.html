@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Assignment 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <form action="Completed_Registeration.html" method="get">
+        <div id="container" style="width: 30%;">
+            <h1>Registeration Form</h1>
+            <div class="infoBox">
+                <label for="FullName">Full Name</label><br>
+                <input type="text" name="FullName" class="box" id="fName" placeholder="Enter Your Full Name">
+                <div id="invalidName" style="position: absolute;"></div>
+            </div>
+            <br>
+            <div class="infoBox">
+                <label for="Email">Email Address</label><br>
+                <input type="email" name="Email" id="emailAdd" placeholder="Enter Your E-mail Address" class="box">
+                <div id="invalidEmail" style="position: absolute;"></div>
+            </div>
+            <br>
+            <div class="infoBox">
+                <label for="City">City</label><br>
+                <select name="City" class="box">
+                    <option value="Akhmīm">Akhmīm</option>
+                    <option value="Al Balyanā">Al Balyanā</option>
+                    <option value="Al Manshāh">Al Manshāh</option>
+                    <option value="Jirjā">Jirjā</option>
+                    <option value="Juhaynah">Juhaynah</option>
+                    <option value="Markaz Jirjā">Markaz Jirjā</option>
+                    <option value="Markaz Sūhāj">Markaz Sūhāj</option>
+                    <option value="Sohag">Sohag</option>
+                    <option value="Ţahţā">Ţahţā</option>
+                </select>
+            </div>
+            <br>
+            <div class="infoBox">
+                <label for="Password">Password</label><br>
+                <input type="password" name="Password" id="pass" placeholder="Enter Your Password" class="box">
+                <div id="invalidPassword" style="position: absolute;"></div>
+            </div>
+            <br>
+            <div class="infoBox">
+                <label for="Password_C">Password Confirmation</label><br>
+                <input type="password" name="Password_C" id="passC" placeholder="Re-Enter Your Password" class="box">
+                <div id="invalidPasswordConfirm" style="position: absolute;"></div>
+            </div>
+            <br>
+            <div id="error" style="position: absolute;"></div>
+            <br><br>
+            <button id="button" type="submit">
+                Register
+            </button>
+            
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

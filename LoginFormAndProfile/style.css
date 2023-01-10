@@ -1,0 +1,74 @@
+body{
+    background: #c9ccd1;
+}
+
+.form-style input{
+    border: 0;
+    height: 50px;
+    border-radius: 0;
+    border-bottom: 1p solid #ebebeb;
+}
+
+.form-style input:focus{
+    border-bottom: 1pv solid #007bff;
+    box-shadow: none;
+    outline: 0;
+    background-color: #ebebeb;
+}
+
+.sideline{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+}
+
+button{
+    height: 50px;
+}
+
+.sideline:before,
+.sideline:after{
+    content: '';
+    border-top: 1px solid #ebebeb;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.sideline:after{
+    margin: 0 0 0 20px;
+}
+
+.flipped{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+.reverse{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.correct{
+    opacity: 0.5;
+    cursor: default;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+.correct[data-item="sass"], .flipped[data-item="sass"]{
+    background: url("http://cathydutton.co.uk/images/tech/sass.jpg") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.correct[data-item="gulp"], .flipped[data-item="gulp"]{
+    background: url("http://cathydutton.co.uk/images/tech/gilp.jpg") left center no-repeat #fff;
+    background-size: contain;
+}

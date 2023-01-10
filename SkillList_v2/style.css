@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #DAACEC, #94C997);
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+main{
+    display: flex;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 350px;
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.3);
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 5px 10px;
+    background-color: rgba(1, 1, 1, 0.15);
+    font-size: 1.7rem;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.inputSkill{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.inputSkill span{
+    padding-right: 10px;
+    font-size: 1.4rem;
+}
+
+.inputSkill input{
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: #D65BCA;
+    width: 300px;
+}
+
+.skillContainer{
+    height: 110px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.md12{
+    font-size: 12px !important;
+    font-weight: 900 !important; 
+}
+
+.content p{
+    font-size: 1.4rem;
+}
+
+.btns{
+    margin-top: 15px;
+}
+
+button{
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+.btns button:nth-child(1){
+    background-color: #DAACEC;
+    color: #fff;    
+}
+
+.btns button:nth-child(2){
+    background-color: #fff;
+    color: #DAACEC;    
+}
+
+.btns button:nth-child(1):hover{
+    background-color: #D65BCA;
+    cursor: pointer;
+}  
+
+.btns button:nth-child(2):hover{
+    color: #D65BCA;
+    cursor: pointer;
+}
+
+.btnAdd{
+    width: 35px;
+    background-color: #DAACEC;
+    /* background-color: #00AB66; */
+    color: #fff;
+    font-weight: 900;
+}
+
+.btnAdd:hover{
+    background-color: #D65BCA;
+    cursor: pointer;
+}
+
+.skillAdd{
+    display: flex;
+}
+
+.skillContainer div span:hover{
+    cursor: pointer;
+    color: #000;
+}
+
+.btnContainer{
+    width: 50%;
+    height: 200px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.indexBtn{
+    width: 150px;
+    height: 40px;
+    font-weight: 900;
+}
+
+.indexBtn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.skillBlockStyle{
+    display:inline-block;
+        background-color: #DAACEC;
+        color: #fff;
+        border-radius: 100px;
+        padding: 3px;
+        margin:2px;
+}
+
+.skillBlockStyle:hover{
+    cursor: pointer;
+
+}

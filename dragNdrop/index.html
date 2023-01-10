@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drag n drop</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #img1{
+            width: 100px;
+        }
+
+        #img1:active{
+            cursor: grab;
+        }
+
+        #scoreBox{
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="scoreBox">
+
+    </div>
+    <div id="box">
+
+    </div>
+    <img id="img1" src="./cookies Task.gif" draggable="true">
+    <script>
+        if(sessionStorage.getItem('score') == null){
+            
+            sessionStorage.setItem('score', 0);
+        }
+        var scoreBox = document.getElementById("scoreBox");
+        scoreBox.innerHTML = sessionStorage.getItem('score');
+        var box = document.getElementById("box");
+        var img = document.getElementById("img1");
+
+        box.addEventListener('dragover', (event) => {
+            event.preventDefault();
+        })
+
+        img.addEventListener('dragstart', (event) => {
+            event.dataTransfer.setData('img1', event.target.id);
+        })
+
+        box.addEventListener('drop', (event) => {
+            event.preventDefault();
+            var droppedElement = event.dataTransfer.getData('img1');
+            event.target.appendChild(document.getElementById(droppedElement));
+            sessionStorage.setItem('score',parseInt(sessionStorage.getItem('score'))+1);
+            scoreBox.innerHTML = sessionStorage.getItem('score');
+        })
+
+        window.addEventListener('dragover', (event) => {
+            event.preventDefault();
+        })
+
+        window.addEventListener('drop', (event) => {
+            event.preventDefault();
+            var droppedElement = event.dataTransfer.getData('img1');
+            event.target.appendChild(document.getElementById(droppedElement));
+        })
+        
+
+    </script>
+</body>
+</html>

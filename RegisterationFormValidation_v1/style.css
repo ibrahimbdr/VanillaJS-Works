@@ -1,0 +1,52 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+header, main{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom-style: solid;
+}
+
+.formSection{
+    width: 500px;
+}
+
+.formSection, #block1, #block2, #block3, #block4, #block5{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoBox{
+    padding-left: 80px;
+}
+
+.infoBox input{
+    width: 300px;
+}
+
+
+footer{
+
+    font-size: small;
+    border-top-style: solid;
+}
+
+.title{
+    font-weight: 700;
+}
+
+#card{
+    width: 30%;
+    border-style: solid ;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 10px;
+    /* padding-left: 300px; */
+}

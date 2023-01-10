@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+body{
+    background: #fdfcfc;
+    margin-top: 120px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    visibility: hidden;
+    height: 0px;
+}
+
+.card{
+    background-color: #c3c8d3;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0px 5px 25px #C0C0C0;
+    transition: 0.7s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #c3c8d3;
+    font-size: 60px;
+    font-weight: 800;
+  }
+
+.line{
+    width: 500px;
+    height: 20px;
+    border-bottom: 2px solid black;
+    position: absolute;
+}
+
+button{
+    margin: 12px;
+    height: 50px;
+    width: 200px;
+    
+    border-radius: 20px;
+    background: #c3c8d3;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 15px #D3D3D3,
+     5px 5px 15px #C0C0C0,
+     inset 5px 5px 10px #D3D3D3,
+     inset -5px -5px 10px #C0C0C0;
+     border: none;
+     font-size: 16px;
+     color: rgb(161, 161, 161);
+     transition: 500ms;
+     display: table;
+    margin: 0 auto;
+}
+
+button:hover{
+    box-shadow: -5px -5px 15px  #D3D3D3,
+    5px 5px 15px #C0C0C0,
+    inset 5px 5px 10px #C0C0C0,
+    inset -5px -5px 10px #D3D3D3;
+    color: #ffffff;
+    transition: 500ms;
+}
+
+
+.time{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.Date{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 50px;
+    font-weight: 300;
+}

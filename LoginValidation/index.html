@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       
+    <div id="container" style="width: 30%;">
+        <h1>Registeration Form</h1>
+        <div class="infoBox">
+            <label for="FullName">Username</label><br>
+            <input type="text" name="FullName" class="box" id="fName" placeholder="Enter Username">
+            <div id="invalidName" style="position: absolute;"></div>
+        </div>
+    
+        <br>
+        <div class="infoBox">
+            <label for="Password">Password</label><br>
+            <input type="password" name="Password" id="pass" placeholder="Enter Your Password" class="box">
+            <div id="invalidPassword" style="position: absolute;"></div>
+        </div>
+        <br>
+        <div class="infoBox" style="display: flex; width: 100%;">
+            <label style="width: 200px;" for="remember">Remember me</label><br>
+            <input type="checkbox" name="remember" id="remChecked" class="box">
+        
+        </div>
+        <br>
+
+            <div id="error" style="position: absolute;"></div>
+        <br><br>
+        <button id="button" type="submit">
+            Register
+        </button>
+        
+    </div>
+
+    <div id="savedData"">
+
+    </div>
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

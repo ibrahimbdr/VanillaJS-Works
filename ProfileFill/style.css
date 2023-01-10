@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body{
+
+} */
+
+.container{
+    display: flex;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    width: 300px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.gender{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    transition: 0.5s ease;
+}
+
+img:focus{
+    opacity: 0.8;
+    transform: scale(1.2);
+    outline: 1px green;
+    background-color: green;
+}
+
+input{
+    margin: 10px 0;
+}
+
+button{
+    margin-top: 20px;
+}

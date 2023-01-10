@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Dancing Script', cursive;
+    }
+    .container {
+        display: flex;
+        width: fit-content;
+        height: 200px;
+        margin: 100px auto;
+    }
+    .vert-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: grey;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        width: 50px;
+        margin: 1px;
+        border-radius: 2px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .card{
+        visibility: hidden;
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0;
+        background-color: lightgray;
+        border-radius: 2px;
+        /* transition: all 0.7s ease; */
+    }
+
+    @keyframes openning {
+        from{width:0;visibility: hidden;}
+        to{width:600px;visibility: visible;}
+    }
+    @keyframes closing {
+        from{width:600px;visibility: visible;}
+        to{width:0;visibility: hidden;}
+    }
+    @keyframes imageOpenning {
+        from{opacity:0;height:200px;width:0;visibility: hidden;}
+        to{opacity:1;height:200px;width:200px;visibility: visible;}
+    }
+    @keyframes imageClosing {
+        from{opacity:1;height:200px;width:200px;visibility: visible;}
+        to{opacity:0;height:200px;width:0;visibility: hidden;}
+    }
+    @keyframes textOpenning {
+        from{font-size:0;visibility: hidden;}
+        to{font-size:20px;visibility: visible;}
+    }
+    @keyframes textclosing {
+        from{font-size:20px;visibility: visible;}
+        to{font-size:0;visibility: hidden;}
+    }
+    .card img{
+        width: 200px;
+        border: 1px solid #fff;
+        visibility: hidden;
+
+
+    }
+    .text{
+        padding-left: 10px;
+        visibility: hidden;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h3 class="vert-card">
+            what we offer
+        </h3>
+        <div class="card">
+            <img src="./image.png" alt="">
+            <div class="text">
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda dolores eos unde eveniet eum corporis dolore, alias quos officia?</p>
+            </div>
+        </div>
+        <h3 class="vert-card">
+            what we offer
+        </h3>
+        <div class="card">
+            <img src="./image.png" alt="">
+            <div class="text">
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda dolores eos unde eveniet eum corporis dolore, alias quos officia?</p>
+            </div>
+        </div>
+        <h3 class="vert-card">
+            what we offer
+        </h3>
+        <div class="card">
+            <img src="./image.png" alt="">
+            <div class="text">
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda dolores eos unde eveniet eum corporis dolore, alias quos officia?</p>
+            </div>
+        </div>
+        <h3 class="vert-card">
+            what we offer
+        </h3>
+        <div class="card">
+            <img src="./image.png" alt="">
+            <div class="text">
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda dolores eos unde eveniet eum corporis dolore, alias quos officia?</p>
+            </div>
+        </div>
+        <h3 class="vert-card">
+            what we offer
+        </h3>
+        <div class="card">
+            <img src="./image.png" alt="">
+            <div class="text">
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda dolores eos unde eveniet eum corporis dolore, alias quos officia?</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const card = document.querySelectorAll('.card');
+        const title = document.querySelectorAll('.vert-card');
+        const image = document.querySelectorAll('img');
+        const text = document.querySelectorAll('.text');
+        let active = [false,false,false,false,false];
+        for(let i=0; i<card.length; i++) {
+            
+                title[i].addEventListener('click', () => {
+                if(!active[i]) {
+                // card[i].style.display = 'flex';
+                card[i].style.animation = 'openning 2s forwards';
+                    image[i].style.animation = 'imageOpenning 2s forwards';
+                    text[i].style.animation = 'textOpenning 2s forwards';
+                title[i].style.backgroundColor='green';
+                active[i] = true;
+            }else{
+                // card[i].style.display = 'none';
+                card[i].style.animation = 'closing 2s forwards';
+                image[i].style.animation = 'imageClosing 2s forwards';
+                text[i].style.animation = 'textClosing 2s forwards';
+                active[i] = false;
+                title[i].style.backgroundColor='grey';
+            }
+            })
+        
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+}
+
+.text{
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.countriesList{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    width: 35rem;
+    height: 80px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+
+}
+
+.card{
+    background-color: #fff;
+    width: 35rem;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+}
+
+.showMap{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.mapInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0 0;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 20rem;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    padding: 25px;
+}
+
+#map{
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 35rem;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    padding: 25px;
+}
+
+#map iframe{
+    
+    border-radius: 20px;
+}
+
+.inputFields{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}

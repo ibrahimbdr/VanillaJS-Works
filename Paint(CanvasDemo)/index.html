@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dragNdrop-canvas</title>
+    <style>
+        canvas{
+            position:absolute;
+            top:100px;
+            left:100px;
+            border:1px solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canv" width="700" height="700"">
+        Your Browser Doesn't Support Canvas.
+    </canvas>
+
+
+
+    <script>
+
+        
+const canvas = document.getElementById("canv");
+let mousedown = false;
+const ctx = canvas.getContext("2d");
+ctx.lineWidth = 5;
+let x;
+let y;
+let memx;//memory for previous position
+let memy;
+
+window.addEventListener("mousedown", (event) => {
+memx = event.clientX-100;//set starting position
+memy = event.clientY-100;
+
+ctx.beginPath();
+console.log('clicked');
+if (event.which == 3) {
+mousedown = false;
+
+} else if (event.which == 1) {
+ mousedown = true;
+}
+
+window.addEventListener('contextmenu', (event) => {
+ event.preventDefault();
+})
+
+window.addEventListener("mousemove", (event) => {
+if (mousedown) {
+  document.body.style.cursor = "crosshair";
+  console.log("MOVING");
+
+  x = event.clientX - 100;
+  y = event.clientY - 100;
+  ctx.moveTo(memx, memy);
+   ctx.lineTo(x,y);
+  memx = x;
+  memy = y;
+  ctx.strokeStyle = 'black';
+  ctx.stroke();
+} else if (!mousedown) {
+  document.body.style.cursor = "crosshair";
+  console.log("MOVING");
+  ctx.beginPath();
+  x = event.clientX - 100;
+  y = event.clientY - 100;
+  ctx.moveTo(memx, memy);
+  ctx.lineTo(x,y);
+  memx = x;
+  memy = y;
+  ctx.strokeStyle = 'white';
+  ctx.stroke();
+ ctx.closePath();
+}
+})
+})
+        
+
+    </script>
+            
+
+</body>
+</html>

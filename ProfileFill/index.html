@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <label for="name">
+                Enter Your Name
+            </label>
+            <input type="text" name="name">
+            <label for="age">
+                Enter Your Age
+            </label>
+            <input type="text" name="age">
+            <label for="color">
+                Choose Your Color
+            </label>
+            <input type="text" name="color">
+            <p>Please select your Gender:</p>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male" hidden>
+                <label for="male"><img src="images/male.webp" width='100px'></label>
+                <input type="radio" id="female" name="gender" value="female" hidden>
+                <label for="female"><img src="images/female.webp" width='100px'></label>  
+            </div>
+            
+            <button type="submit">
+                Submit
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
